@@ -1,0 +1,7 @@
+C:\Users\HansMattin-Lassei\Documents\Utbildning\NETGR7\lektion-1\AspNetCoreMVC\obj\Release\net6.0\PubTmp\Out\AspNetCoreMVC.exe
+C:\Users\HansMattin-Lassei\Documents\Utbildning\NETGR7\lektion-1\AspNetCoreMVC\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+C:\Users\HansMattin-Lassei\Documents\Utbildning\NETGR7\lektion-1\AspNetCoreMVC\obj\Release\net6.0\PubTmp\Out\appsettings.json
+C:\Users\HansMattin-Lassei\Documents\Utbildning\NETGR7\lektion-1\AspNetCoreMVC\obj\Release\net6.0\PubTmp\Out\AspNetCoreMVC.dll
+C:\Users\HansMattin-Lassei\Documents\Utbildning\NETGR7\lektion-1\AspNetCoreMVC\obj\Release\net6.0\PubTmp\Out\AspNetCoreMVC.deps.json
+C:\Users\HansMattin-Lassei\Documents\Utbildning\NETGR7\lektion-1\AspNetCoreMVC\obj\Release\net6.0\PubTmp\Out\AspNetCoreMVC.runtimeconfig.json
+C:\Users\HansMattin-Lassei\Documents\Utbildning\NETGR7\lektion-1\AspNetCoreMVC\obj\Release\net6.0\PubTmp\Out\AspNetCoreMVC.pdb

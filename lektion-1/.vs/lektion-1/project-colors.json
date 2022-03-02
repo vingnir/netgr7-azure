@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "2d4caf55-dd96-4838-a564-53ebf11a2b67": {
+      "ProjectGuid": "2d4caf55-dd96-4838-a564-53ebf11a2b67",
+      "DisplayName": "AspNetCoreMVC",
+      "ColorIndex": 0
+    },
+    "98c76b9c-0dac-4f7e-9911-ebdb16caad82": {
+      "ProjectGuid": "98c76b9c-0dac-4f7e-9911-ebdb16caad82",
+      "DisplayName": "BlazorWebAssembly",
+      "ColorIndex": 1
+    },
+    "3ab970e8-87ee-4b54-864b-3769b756875c": {
+      "ProjectGuid": "3ab970e8-87ee-4b54-864b-3769b756875c",
+      "DisplayName": "BlazorServer",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}
