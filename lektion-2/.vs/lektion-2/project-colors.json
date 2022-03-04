@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "dad153e8-aeda-4129-a7aa-a3574c535185": {
+      "ProjectGuid": "dad153e8-aeda-4129-a7aa-a3574c535185",
+      "DisplayName": "AspNetWebApi",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "4ccdc513-f834-46b1-92c5-5e0769b71374": {
+      "ProjectGuid": "4ccdc513-f834-46b1-92c5-5e0769b71374",
+      "DisplayName": "BlazorApp",
+      "ColorIndex": 1
+    },
+    "85ab4589-ec63-4d2c-aa12-da3df8ece0aa": {
+      "ProjectGuid": "85ab4589-ec63-4d2c-aa12-da3df8ece0aa",
+      "DisplayName": "AzureFunctions",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

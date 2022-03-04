@@ -1,0 +1,28 @@
+﻿@page "/create"
+
+<h3>AddProduct</h3>
+
+<div class="container mt-5">
+    <EditForm Model="@model" OnSubmit="@HandleSubmit">
+        <InputText @bind-Value="model.Name" placeholder="Produktens namn" class="form-control mb-3" />
+        <InputText @bind-Value="model.CategoryName" placeholder="Kategori" class="form-control mb-3" />
+        <InputNumber @bind-Value="model.Price" placeholder="Pris" class="form-control mb-3" />
+        <InputTextArea @bind-Value="model.Description" placeholder="Beskrivning" class="form-control mb-3" />
+        <button type="submit" class="btn btn-secondary">Skicka</button>
+    </EditForm>
+</div>
+
+
+
+@code {
+    private ProductCreateModel model = new();
+
+    private async Task HandleSubmit()
+    {
+        var res = await Http.PostAsJsonAsync("https://netgr7-webapi.azurewebsites.net/api/products", model);
+        if(res.IsSuccessStatusCode)
+        {
+            NavManager.NavigateTo("/products");  
+        }
+    }
+}
