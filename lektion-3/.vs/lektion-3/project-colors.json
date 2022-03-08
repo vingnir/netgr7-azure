@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "9552db22-d2c4-4f68-938f-f4007b23faf3": {
+      "ProjectGuid": "9552db22-d2c4-4f68-938f-f4007b23faf3",
+      "DisplayName": "BlazorApp",
+      "ColorIndex": 0
+    },
+    "479c453b-3c7c-4c68-bb64-da985ed11604": {
+      "ProjectGuid": "479c453b-3c7c-4c68-bb64-da985ed11604",
+      "DisplayName": "ConsoleApp",
+      "ColorIndex": 1
+    },
+    "d3873359-58e3-48af-9493-d9b11743ff68": {
+      "ProjectGuid": "d3873359-58e3-48af-9493-d9b11743ff68",
+      "DisplayName": "ClassLibrary",
+      "ColorIndex": 2
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "6aa4a821-fe44-49ce-b8ef-3cd312ba9e46": {
+      "ProjectGuid": "6aa4a821-fe44-49ce-b8ef-3cd312ba9e46",
+      "DisplayName": "AzureFunctions",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}

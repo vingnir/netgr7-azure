@@ -1,0 +1,90 @@
+﻿@page "/"
+<PageTitle>@Title</PageTitle>
+<SiteTitle Title="@Title" />
+
+
+<section class="my-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+
+                        @if(devices == null)
+                        {
+                            <p>Loading...</p>
+                        }
+                        else
+                        {
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Device Id</th>
+                                        <th>Sensor Type</th>
+                                        <th>Placement</th>
+                                        <th>Notifications</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>                       
+                                <tbody>
+
+                                    @foreach(var device in devices)
+                                    {
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center me-4">
+                                                    @if(device.ConnectionState == "Connected")
+                                                    {
+                                                        <div class="dot online"></div>
+                                                    }
+                                                    else
+                                                    {
+                                                        <div class="dot offline"></div>
+                                                    }
+                                                    <div class="ms-2">@device.DeviceId</div>
+                                                </div>
+                                            </td>
+                                            <td>@device.SensorType</td>
+                                            <td>@device.Placement</td>
+                                            <td>
+                                                @if(device.AlertNotification)
+                                                {
+                                                    <i class="fas fa-exclamation-triangle text-warning"></i>
+                                                }
+                                            </td>
+                                            <td>
+                                                <i class="ms-3 fas fa-pause"></i>
+                                                <NavLink href=""><i class="ms-3 fas fa-edit"></i></NavLink>
+                                                <i class="ms-3 fas fa-trash"></i>
+                                            </td>
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>                            
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@code {
+    private string Title = "Dashboard";
+    private DeviceModel[] devices;
+    private Timer timer;
+
+    protected override async Task OnInitializedAsync()
+    {
+        timer = new Timer(async (object stateInfo) =>
+        {
+            devices = await Http.GetFromJsonAsync<DeviceModel[]>("https://netgr7-functionapp.azurewebsites.net/api/GetDevices");
+            StateHasChanged();
+
+        }, new AutoResetEvent(false), 0, 5000);
+    }
+
+}

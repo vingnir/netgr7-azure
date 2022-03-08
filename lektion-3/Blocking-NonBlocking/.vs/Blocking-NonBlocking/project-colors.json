@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "fc6d11d1-82df-415a-8507-bb369dd3807a": {
+      "ProjectGuid": "fc6d11d1-82df-415a-8507-bb369dd3807a",
+      "DisplayName": "Blocking-NonBlocking",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

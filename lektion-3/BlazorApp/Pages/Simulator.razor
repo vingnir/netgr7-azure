@@ -1,0 +1,32 @@
+﻿@page "/simulator"
+<PageTitle>@Title</PageTitle>
+<SiteTitle Title="@Title" />
+
+<section class="my-4">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            @for (int i=0; i < count; i++)
+            {
+                <SimulatedDevice />
+            }
+            
+            <div class="col">
+                <div class="add-device d-flex justify-content-center align-items-center h-100 shadow-sm">
+                    <div @onclick="AddDevice" class="add-device-circle d-flex justify-content-center align-items-center shadow-sm bg-light">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@code {
+    private string Title = "Simulator";
+    private int count = 2;
+
+    private void AddDevice()
+    {
+        count++;
+    }
+}
