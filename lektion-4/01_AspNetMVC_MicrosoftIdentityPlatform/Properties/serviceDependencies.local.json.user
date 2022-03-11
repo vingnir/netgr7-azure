@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "identityapp1": {
+      "restored": true,
+      "restoreTime": "2022-03-10T12:54:46.2173745Z"
+    },
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2022-03-10T12:54:53.2843739Z"
+    }
+  },
+  "parameters": {}
+}

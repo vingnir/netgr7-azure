@@ -1,0 +1,1 @@
+C:\Users\HansMattin-Lassei\Documents\Utbildning\NETGR7\lektion-4\02_BlazorApp_TEST\obj\Release\net6.0\browser-wasm\PubTmp\Out\web.config

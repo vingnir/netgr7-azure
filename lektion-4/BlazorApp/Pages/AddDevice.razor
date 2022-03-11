@@ -1,0 +1,40 @@
+﻿@page "/devices/add/{id}"
+
+<div class="container">
+    <div class="d-flex justify-content-center align-items-center vh-100">
+        <div class="col col-md-6">
+            <EditForm Model="@model" OnSubmit="@HandleSubmit">
+                <div class="mb-3">
+                    <InputText @bind-Value="model.PinCode" type="text" class="form-control" placeholder="Pin code"  />
+                </div>
+                <div class="mb-3">
+                    <InputText @bind-Value="model.Placement" type="text" class="form-control" placeholder="Placement" />
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-secondary">Add Device</button>
+                </div>
+            </EditForm>
+        </div>
+    </div>
+</div>
+
+
+@code {
+    [Parameter]
+    public string id { get; set; }
+
+    private DeviceAddModel model;
+
+    protected override void OnInitialized()
+    {
+        model = new();
+        model.DeviceId = id;
+    }
+
+    private async Task HandleSubmit()
+    {
+        await Http.PostAsJsonAsync("https://netgr7-azurefunction.azurewebsites.net/api/devices", model);
+        model = new();
+    }
+
+}

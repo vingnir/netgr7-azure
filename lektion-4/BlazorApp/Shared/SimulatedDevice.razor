@@ -1,0 +1,40 @@
+﻿@using BlazorApp.JSInterop
+<div class="col">
+    <div id="@deviceId" class="card shadow h-100">     
+        <div class="card-body">
+            <div class="d-flex justify-content-center">
+                <div id="@deviceId-qrcode" class="m-3"></div>
+            </div>
+            <h5 class="card-title text-center">@deviceId</h5>
+            <p class="card-text text-center mt-4">pin code</p>
+            <div class="d-flex justify-content-center mb-3">
+                @foreach(var digit in pincode)
+                {
+                    <div class="pincode-digit">@digit</div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Inject]
+    private IJavascriptInvoker IJavascriptInvoker { get; set; }
+
+
+    string deviceId = Guid.NewGuid().ToString();
+
+    Random rnd = new Random();
+    int[] pincode = new int[4];
+
+    protected override void OnInitialized()
+    {
+        for (int i = 0; i < pincode.Length; i++)
+            pincode[i] = rnd.Next(0, 9);
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await IJavascriptInvoker.GenerateQRCodeAsync(deviceId);
+    }
+}
